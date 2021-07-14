@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Assistant', sans-serif;
+ }
+
+ nav{
+    background-image: linear-gradient(to right, #BFAF94, #FDF3C2, #E2C291);
+    padding: 2rem;
+    font-weight: 500;
+ }
+
+nav img{
+    position: relative;
+    top: 10%;
+    left: 20%;
+}
+
+nav a:link, a:visited {
+	text-decoration: none;
+    color: black
+	}
+
+nav a:hover {
+	text-decoration: underline;
+	color: blue
+	}
+nav a:active {
+	text-decoration: none
+	}
