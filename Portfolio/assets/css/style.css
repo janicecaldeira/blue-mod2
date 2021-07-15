@@ -11,26 +11,25 @@ html{
 }
 
 nav{
-    background-color: #E03F3D90;
-    font-weight: 500;
+    background-color: #E03F3D;
     position: fixed;
     width: 100%;
-
 }
 
 nav ul{
     list-style: none;
+    font-weight: large;
     display: flex;
     justify-content: center;
 }
 
 nav ul li{
-    padding: 1rem;
+    padding: 2rem;
 }
 
 nav ul li a{
     text-decoration: none;
-    color: #941B19;
+    color: #fff;
     font-weight: 500;
 }
 
@@ -38,18 +37,19 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4rem;
+    padding: 3rem;
 }
 
 header div p{
     font-size: 2vw;
     font-weight: 700;
-    color: #E03F3D90;
+    color: #E03F3D;
     padding-left: 4rem;
+    
 }
 
 header div spam{
-    font-size: 0.7vw;
+    font-size: 1vw;
     font-weight: 500;
     color: #941B19;
     padding-left: 4rem;
@@ -58,6 +58,7 @@ header div spam{
 header div#img-goal{
     display: flex;
     justify-content: center;
+    padding-top: 3rem;
 }
 
 header div#img-goal img{
@@ -68,8 +69,8 @@ section#sobre-mim{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4rem;
-    background-color: #E03F3D90;
+    padding: 3rem 3rem 3rem 3rem;
+    background-color: #E03F3D;
 
 }
 
@@ -81,10 +82,10 @@ section#sobre-mim div img{
 }
 
 section#sobre-mim div p{
-    font-size: 1.1vw;
+    font-size: 1.2vw;
     text-align: justify;
     color: #fff;
-    line-height: 2.5rem;
+    line-height: 2rem;
     padding: 1rem;
 }
 
@@ -98,7 +99,6 @@ section#projetos{
 section#projetos div img{
     display: block;
     margin: auto;
-    width: 30%;
 }
 
 section#projetos div h2{
@@ -115,9 +115,9 @@ section#projetos div{
 }
 
 section#projetos div button{
-    border: 1px solid #941B19;
-    background-color: #fff;
-    color: #941B19;
+    border: 1px solid #ef9f9e;
+    background-color: #ef9f9e;
+    color: #e03f3d;
     padding: 1rem;
     font-size: 1vw;
     font-weight: 600;
@@ -130,14 +130,14 @@ section#projetos div button{
 }
 
 section#projetos div button:hover{
-    background-color:#941B19;
+    background-color:#e03f3d;
     color: #fff;
     transform: scale(1.1);
 }
 
 section#habilidades{
     padding: 3rem 10rem 3rem 10rem;
-    background-color: #e0403d48;
+    background-color: #ef9f9e;
 }
 
 section#habilidades h2{
@@ -154,12 +154,12 @@ section#habilidades p{
 
 section#habilidades div{
     display: flex;
-    border: 1px solid #941B19;
+    border: 1px solid #e03f3d;
     border-radius: 1rem;
 }
 
 section#habilidades div spam#python{
-    background-color:#941B19;
+    background-color:#e03f3d;
     color: #fff;
     text-align: center;
     padding: .3rem;
@@ -168,7 +168,7 @@ section#habilidades div spam#python{
 }
 
 section#habilidades div spam#html{
-    background-color:#941B19;
+    background-color:#e03f3d;
     color: #fff;
     text-align: center;
     padding: .3rem;
@@ -177,7 +177,7 @@ section#habilidades div spam#html{
 }
 
 section#habilidades div spam#css{
-    background-color:#941B19;
+    background-color:#e03f3d;
     color: #fff;
     text-align: center;
     padding: .3rem;
