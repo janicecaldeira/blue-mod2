@@ -45,14 +45,15 @@ header div p{
     font-weight: 700;
     color: #E03F3D;
     padding-left: 4rem;
+    text-align: end;
     
 }
 
 header div spam{
-    font-size: 1vw;
+    font-size: 1.2vw;
     font-weight: 500;
-    color: #941B19;
-    padding-left: 4rem;
+    color: #E03F3D;
+    padding-left: 24.5rem
 }
 
 header div#img-goal{
@@ -94,34 +95,40 @@ section#projetos{
     justify-content: center;
     align-items: center;
     padding: 3rem;
-}
-
-section#projetos div img{
+ }
+ 
+ section#projetos div img{
     display: block;
     margin: auto;
-}
-
-section#projetos div h2{
+    width: 50%;
+    padding-bottom: 2rem;
+ }
+ 
+ section#projetos div h2{
     text-align: center;
-    padding: 1rem;
-}
-
-section#projetos div p{
+    padding: .8rem;
+    background-color: #C63A38;
+    color: #fff;
+    border-radius: 2rem;
+ }
+ 
+ section#projetos div p{
     text-align: justify;
-}
-
-section#projetos div{
+    padding-top: 1rem;
+ }
+ 
+ section#projetos div{
     padding: 2rem;
-}
+ }
 
 section#projetos div button{
-    border: 1px solid #ef9f9e;
-    background-color: #ef9f9e;
-    color: #e03f3d;
+    border: 3px solid #C63A38;
+    background-color: #FFF;
+    color: #C63A38;
     padding: 1rem;
     font-size: 1vw;
     font-weight: 600;
-    border-radius: .9rem;
+    border-radius: 2rem;
     display: block;
     margin: auto;
     margin-top: 2rem;
@@ -130,14 +137,14 @@ section#projetos div button{
 }
 
 section#projetos div button:hover{
-    background-color:#e03f3d;
+    border: 3px solid #C63A38;
+    background-color: #C63A38;
     color: #fff;
-    transform: scale(1.1);
 }
 
 section#habilidades{
     padding: 3rem 10rem 3rem 10rem;
-    background-color: #ef9f9e;
+    background-color: #EF9F9E;
 }
 
 section#habilidades h2{
