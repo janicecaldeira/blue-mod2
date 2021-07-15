@@ -6,11 +6,16 @@
     font-family: "Comfortaa", sans-serif;
 }
 
-/* Comentario */
+html{
+    scroll-behavior: smooth;
+}
 
 nav{
     background-color: #E03F3D90;
-    padding: 2rem;
+    font-weight: 500;
+    position: fixed;
+    width: 100%;
+
 }
 
 nav ul{
@@ -26,6 +31,156 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: #941B19;
-    font-size: x-large;
     font-weight: 500;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+
+header div p{
+    font-size: 2vw;
+    font-weight: 700;
+    color: #E03F3D90;
+    padding-left: 4rem;
+}
+
+header div spam{
+    font-size: 0.7vw;
+    font-weight: 500;
+    color: #941B19;
+    padding-left: 4rem;
+}
+
+header div#img-goal{
+    display: flex;
+    justify-content: center;
+}
+
+header div#img-goal img{
+    width: 60%;
+}
+
+section#sobre-mim{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    background-color: #E03F3D90;
+
+}
+
+section#sobre-mim div img{
+    width: 200;
+    border-radius: 50%;
+    padding: 3rem;
+
+}
+
+section#sobre-mim div p{
+    font-size: 1.1vw;
+    text-align: justify;
+    color: #fff;
+    line-height: 2.5rem;
+    padding: 1rem;
+}
+
+section#projetos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+section#projetos div img{
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+
+section#projetos div h2{
+    text-align: center;
+    padding: 1rem;
+}
+
+section#projetos div p{
+    text-align: justify;
+}
+
+section#projetos div{
+    padding: 2rem;
+}
+
+section#projetos div button{
+    border: 1px solid #941B19;
+    background-color: #fff;
+    color: #941B19;
+    padding: 1rem;
+    font-size: 1vw;
+    font-weight: 600;
+    border-radius: .9rem;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: .6s ease-out;
+}
+
+section#projetos div button:hover{
+    background-color:#941B19;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+section#habilidades{
+    padding: 3rem 10rem 3rem 10rem;
+    background-color: #e0403d48;
+}
+
+section#habilidades h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+section#habilidades p{
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+section#habilidades div{
+    display: flex;
+    border: 1px solid #941B19;
+    border-radius: 1rem;
+}
+
+section#habilidades div spam#python{
+    background-color:#941B19;
+    color: #fff;
+    text-align: center;
+    padding: .3rem;
+    border-radius: 1rem;
+    width: 80%;
+}
+
+section#habilidades div spam#html{
+    background-color:#941B19;
+    color: #fff;
+    text-align: center;
+    padding: .3rem;
+    border-radius: 1rem;
+    width: 50%;
+}
+
+section#habilidades div spam#css{
+    background-color:#941B19;
+    color: #fff;
+    text-align: center;
+    padding: .3rem;
+    border-radius: 1rem;
+    width: 30%;
 }
