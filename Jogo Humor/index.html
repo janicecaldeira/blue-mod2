@@ -1,0 +1,73 @@
+<!-- Projeto - Jogo do Humor
+
+Esse jogo tem o objetivo de treinar e validar seus conhecimentos em HTML, CSS e JavaScript, ele consiste na construção de um site estático para mostrar uma troca de humor de um personagem a sua escolha.
+
+Passos para implementação do projeto:
+
+Escolha um personagem;
+Mostre o nome dele;
+Escolha no mínimo 2 humores para ele;
+Escolha as fotos específicas para cada humor;
+Crie um botão para a troca de humor;
+Crie um estilo criativo e inovador;
+Faça o botão funcionar com JavaScript.
+
+Separe as implementações em três partes, construção do HTML, estilização do CSS e interatividade com JavaScript. -->
+
+<!DOCTYPE html>
+<html Lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jogo do Humor</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <script src="./assets/js/trocar.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li> <a href="#inicio"> Início </a> </li>
+                <li> <a href="#personagem"> Personagem </a> </li>
+                <li> <a href="#curiosidades"> Curiosidades </a> </li>
+                <li> <a href="#humor"> Humor </a> </li>
+            </ul>
+        </nav>
+
+        <header id="inicio">
+            <h1>Jogo do Humor</h1>
+            <img src="./assets/img/abertura.png" alt="Imagem de duas máscaras mostrando a mudança de humor feliz e triste">
+        </header>
+
+        <section id="personagem">
+            <div>
+                <img src="./assets/img/OlaGarfield.png" alt="Imagem do personagem Garfield">
+            </div>
+
+            <div>
+                <p><spam>Nome:</spam> Garfield</p>
+                <br>
+                <p><spam>Idade:</spam> 43 anos</p>
+            </div>
+        </section>
+
+        <section id="curiosidades">
+            <div>
+                <h2>Curiosidades</h2>
+            </div>
+            <div>
+                <h3>Garfield estreou em <i>19 de Junho de 1978</i> <br>e já mostrava sarcasmo na sua primeira tira:<br></h3>
+                <img src="./assets/img/tirinha.jpeg"alt="Imagem da primeira tirinha publicada do personagem Garfield">
+            </div>
+        </section>
+        
+        <section id="humor">
+             <div>
+                <p>Quer descobrir como nosso amado<br><b>Garfield</b> pode se sentir durante a semana?</p>
+                <button onclick="trocarHumor()">Ver humor</button>
+                <img id="Garfield" src="./assets/img/Garfield.png">
+                <p id="texto">
+            </div>
+        </section>
+    </body>
+</html>

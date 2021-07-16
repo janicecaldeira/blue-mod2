@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Comfortaa", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+nav{
+    background-color: #73461F;
+    position: fixed;
+    width: 100%;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li{
+    padding: 1rem;
+}
+
+nav ul li a{
+    font-family: 'Sacramento', cursive;
+    text-decoration: none;
+    color: #F2F2F2;
+    font-size: 2.5rem;
+}
+
+header#inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A6702E;
+    padding: 10rem;
+}
+
+header#inicio h1{
+    text-align: center;
+    color: black;
+    font-size: 8rem;
+    font-family: 'Sacramento', cursive;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+ }
+
+ header#inicio img{
+    width: 20%;
+    padding-top: 5rem;
+    padding-left: 3rem;
+ }
+
+section#personagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EA7D1F;
+    padding: 8rem;
+}
+
+section#personagem div img{
+    width: 600px;
+    padding-top: 4rem;
+}
+
+section#personagem div spam{
+    font-family: 'Sacramento', cursive;
+    font-size: 3rem;
+    color: #0D0D0D;
+}
+
+section#personagem div p{
+    font-size: 2.5rem;
+    color: #F2F2F2;
+}
+
+section#curiosidades{
+    background-color: #F59E36;
+    padding-top: 6rem;
+}
+
+section#curiosidades div h2{
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Sacramento';
+    padding-top: 1rem;
+}
+
+section#curiosidades div h3{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+section#curiosidades div img{
+    display: block;
+    margin: auto;
+    width: 80%;
+    padding-bottom: 3rem;
+}
+
+section#humor{
+    background-color: #F2E291;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    text-align: center;
+}
+ 
+section#humor div p{
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+ 
+section#humor div button{
+    border: 4px dotted #0D0D0D;
+    border-radius: 2rem;
+    background-color: #F2E291;
+    color: #0D0D0D;
+    padding: .8rem;
+    font-size: 1.2rem;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: .7s ease-out;
+}
+
+section#humor div button:hover{
+    border: 4px dotted #F28705;
+    background-color: #F28705;
+    color: #F2F2F2;
+}
+
+section#humor div img{
+    padding-top: 2rem;
+    width: 70%;
+}
+
+section#humor div p#texto{
+    text-align: center;
+    padding-bottom: 1rem;
+}
