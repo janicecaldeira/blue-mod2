@@ -32,7 +32,7 @@ nav ul li a{
     font-family: 'Sacramento', cursive;
     text-decoration: none;
     color: #F2F2F2;
-    font-size: 2.5vw;
+    font-size: 3vw;
 }
 
 header#inicio{
@@ -40,7 +40,9 @@ header#inicio{
     justify-content: center;
     align-items: center;
     background-color: #A6702E;
-    padding: 10rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    width: 100%;
 }
 
 header#inicio h1{
@@ -48,14 +50,11 @@ header#inicio h1{
     color: black;
     font-size: 8vw;
     font-family: 'Sacramento', cursive;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
  }
 
  header#inicio img{
-    width: 20%;
-    padding-top: 5rem;
-    padding-left: 3rem;
+    max-width: 20%;
+    padding: 2rem;
  }
 
 section#personagem{
@@ -63,10 +62,14 @@ section#personagem{
     justify-content: center;
     align-items: center;
     background-color: #EA7D1F;
-    padding: 8rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    width: 100%;
 }
 
 section#personagem div img{
+    display: auto;
+    margin: auto;
     width: 600px;
     padding-top: 4rem;
 }
@@ -84,27 +87,27 @@ section#personagem div p{
 
 section#curiosidades{
     background-color: #F59E36;
-    padding-top: 6rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
 }
 
 section#curiosidades div h2{
     font-size: 4vw;
     text-align: center;
     font-family: 'Sacramento';
-    padding-top: 1rem;
 }
 
 section#curiosidades div h3{
     font-size: 1.5vw;
     text-align: center;
-    padding: 1.5rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
 }
 
 section#curiosidades div img{
     display: block;
     margin: auto;
-    width: 80%;
-    padding-bottom: 3rem;
+    width: 70%;
 }
 
 section#humor{
