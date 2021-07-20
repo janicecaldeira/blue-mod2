@@ -169,67 +169,66 @@ section#habilidades div{
     display: flex;
     border: 1px solid #e03f3d;
     border-radius: 1rem;
-    color: black;
 }
 
 section#habilidades div spam#python{
+    width: 80%;
+    background-color: #e03f3d;
+    color: #fff;
     text-align: end;
     padding: .3rem;
     border-radius: 1rem;
-    width: 0%;
+    animation: python 5s 1;
 }
 
-section#habilidades div spam#python:hover{
-    background-color: #e03f3d;
-    color: #fff;
-    transition: width .8s;
-    transition-timing-function: linear;
-    width: 80%;
+@keyframes python{
+    from {width: 0%;}
+    to {width: 80%;}
 }
 
 section#habilidades div spam#html{
+    width: 50%;
+    background-color: #e03f3d;
+    color: #fff;
     text-align: end;
     padding: .3rem;
     border-radius: 1rem;
-    width: 0%;
+    animation: html 5s 1;
 }
 
-section#habilidades div spam#html:hover{
-    background-color: #e03f3d;
-    color: #fff;
-    transition: width .7s;
-    transition-timing-function: linear;
-    width: 50%;
+@keyframes html{
+    from {width: 0%;}
+    to {width: 50%;}
 }
 
 section#habilidades div spam#css{
+    width: 30%;
+    background-color: #e03f3d;
+    color: #fff;
     text-align: end;
     padding: .3rem;
     border-radius: 1rem;
-    width: 0%;
+    animation: css 5s 1;
 }
 
-section#habilidades div spam#css:hover{
-    background-color: #e03f3d;
-    color: #fff;
-    transition: width .6s;
-    transition-timing-function: linear;
-    width: 30%;
+@keyframes css{
+    from {width: 0%;}
+    to {width: 30%;}
 }
 
 section#habilidades div spam#js{
+    width: 10%;
+    background-color: #e03f3d;
+    color: #fff;
     text-align: end;
     padding: .3rem;
     border-radius: 1rem;
-    width: 0%;
+    animation: js 5s 1;
 }
 
-section#habilidades div spam#js:hover{
-    background-color: #e03f3d;
-    color: #fff;
-    transition: width .5s;
-    transition-timing-function: linear;
-    width: 10%;
+@keyframes js{
+    from {width: 0%;}
+    to {width: 10%;}
 }
 
 section#contato{
