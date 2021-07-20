@@ -24,7 +24,7 @@ nav ul{
 }
 
 nav ul li{
-    padding: 2rem;
+    padding: 1rem;
 }
 
 nav ul li a{
@@ -143,7 +143,11 @@ section#projetos div button:hover{
 }
 
 section#habilidades{
-    padding: 3rem 10rem 3rem 10rem;
+    padding: 3rem;
+    padding-top: 10rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-bottom: 12rem;
     background-color: #EF9F9E;
 }
 
@@ -191,3 +195,103 @@ section#habilidades div spam#css{
     border-radius: 1rem;
     width: 30%;
 }
+
+section#contato{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
+ 
+ section#contato div#redes{
+    width: 100%;
+    padding: 2rem;
+    padding-top: 4rem;
+ }
+ 
+ section#contato div#redes h3{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+ }
+ 
+ section#contato div#redes div#icons{
+    display: flex;
+    justify-content: center;
+ }
+ 
+ section#contato div#redes div#icons a{
+    text-decoration: none;
+    color: #C63A38;
+    font-size: 3rem;
+    padding: 1.5rem;
+    transition: all .4s ease-out;
+ }
+ 
+ section#contato div#redes div#icons a:hover{
+    color: #E03F3D;
+ }
+ 
+ section#contato div#redes div#icons a i{
+    transition: all .4s ease-out;
+ }
+ 
+ /* O atributo transform só muda um elemento que aparece efetivamente na tela, por isso colocamos ele na tag i, e não na tag a */
+ section#contato div#redes div#icons a i:hover{
+    transform: scale(1.1);
+ }
+ 
+ section#contato div#form{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
+ 
+ section#contato div#form h3{
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+ }
+ 
+ section#contato div#form form{
+    width: 50%;
+ }
+ 
+ /* A virgula serve para estilizar dois elementos ao mesmo tempo */
+ section#contato div#form form input, textarea{
+    width: 100%;
+    padding: .5rem;
+    font-size: 1.5rem;
+    border: 1px solid #E03F3D;
+    border-radius: 2rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    outline: none;
+ }
+ 
+ section#contato div#form form label{
+    font-size: 1.2rem;
+ }
+ 
+ section#contato div#form form button{
+    border: 1px solid #C63A38;
+    background-color: #FFF;
+    color: #C63A38;
+    padding: 1rem;
+    font-size: 1vw;
+    font-weight: 600;
+    border-radius: 2rem;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: .6s ease-out;
+    width: 20%;
+ }
+ 
+ section#contato div#form form button:hover{
+    border: 1px solid #C63A38;
+    background-color: #C63A38;
+    color: #fff;
+ }
