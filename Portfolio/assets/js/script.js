@@ -10,6 +10,9 @@ inputNome.addEventListener('keyup', () => {
     else if(inputNome.Value == '' || inputNome.Value == null){
         inputNome.style.borderColor = '#E03F3D'
     }
+    else {
+        inputNome.style.backgroundColor = 'white'
+    }
 })
 
 inputEmail.addEventListener('keyup', () => {
@@ -24,7 +27,7 @@ inputEmail.addEventListener('keyup', () => {
     }
 })
 
-textareaMensagem.addEventListener('keyup', ()=>{
+textareaMensagem.addEventListener('keyup', () => {
     if(textareaMensagem.value.length >= 10){
         textareaMensagem.style.borderColor = 'green';
     }

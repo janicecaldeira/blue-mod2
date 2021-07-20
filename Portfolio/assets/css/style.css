@@ -11,20 +11,19 @@ html{
 }
 
 nav{
-    background-color: #E03F3D;
+    background-color: #C63A38;
     position: fixed;
     width: 100%;
 }
 
 nav ul{
     list-style: none;
-    font-weight: large;
     display: flex;
     justify-content: center;
 }
 
 nav ul li{
-    padding: 1rem;
+    padding: 1.2rem;
 }
 
 nav ul li a{
@@ -33,11 +32,17 @@ nav ul li a{
     font-weight: 500;
 }
 
+nav ul li a:hover{
+    box-shadow: 0 0 10px 10px #e04240;
+    padding: .5rem;
+}
+
 header{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
 }
 
 header div p{
@@ -46,14 +51,13 @@ header div p{
     color: #E03F3D;
     padding-left: 4rem;
     text-align: end;
-    
 }
 
 header div spam{
     font-size: 1.2vw;
     font-weight: 500;
     color: #E03F3D;
-    padding-left: 24.5rem
+    padding-left: 23.7rem
 }
 
 header div#img-goal{
@@ -70,7 +74,7 @@ section#sobre-mim{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3rem 3rem 3rem 3rem;
+    padding: 3.5rem;
     background-color: #E03F3D;
 
 }
@@ -78,8 +82,6 @@ section#sobre-mim{
 section#sobre-mim div img{
     width: 200;
     border-radius: 50%;
-    padding: 3rem;
-
 }
 
 section#sobre-mim div p{
@@ -101,7 +103,7 @@ section#projetos{
     display: block;
     margin: auto;
     width: 50%;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
  }
  
  section#projetos div h2{
@@ -109,7 +111,6 @@ section#projetos{
     padding: .8rem;
     background-color: #C63A38;
     color: #fff;
-    border-radius: 2rem;
  }
  
  section#projetos div p{
@@ -122,24 +123,25 @@ section#projetos{
  }
 
 section#projetos div button{
-    border: 3px solid #C63A38;
-    background-color: #FFF;
-    color: #C63A38;
+    border: #C63A38;
+    background-color: #fff;
+    color: #fff;
+    width: 50%;
     padding: 1rem;
-    font-size: 1vw;
-    font-weight: 600;
-    border-radius: 2rem;
+    font-size: 1.2vw;
     display: block;
     margin: auto;
     margin-top: 2rem;
     cursor: pointer;
-    transition: .6s ease-out;
+    box-shadow: 0 0 40px 40px #e04240 inset, 0 0 0 0 #e04240;
+    transition: .3s ease-in-out;
 }
 
 section#projetos div button:hover{
-    border: 3px solid #C63A38;
-    background-color: #C63A38;
-    color: #fff;
+    border: #e04240;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 0 10px 0 #e04240 inset, 0 0 10px 8px #e04240;
 }
 
 section#habilidades{
@@ -148,7 +150,7 @@ section#habilidades{
     padding-left: 8rem;
     padding-right: 8rem;
     padding-bottom: 12rem;
-    background-color: #EF9F9E;
+    background-color: #F2A2A2;
 }
 
 section#habilidades h2{
@@ -167,131 +169,182 @@ section#habilidades div{
     display: flex;
     border: 1px solid #e03f3d;
     border-radius: 1rem;
+    color: black;
 }
 
 section#habilidades div spam#python{
-    background-color:#e03f3d;
-    color: #fff;
-    text-align: center;
+    text-align: end;
     padding: .3rem;
     border-radius: 1rem;
+    width: 0%;
+}
+
+section#habilidades div spam#python:hover{
+    background-color: #e03f3d;
+    color: #fff;
+    transition: width .8s;
+    transition-timing-function: linear;
     width: 80%;
 }
 
 section#habilidades div spam#html{
-    background-color:#e03f3d;
-    color: #fff;
-    text-align: center;
+    text-align: end;
     padding: .3rem;
     border-radius: 1rem;
+    width: 0%;
+}
+
+section#habilidades div spam#html:hover{
+    background-color: #e03f3d;
+    color: #fff;
+    transition: width .7s;
+    transition-timing-function: linear;
     width: 50%;
 }
 
 section#habilidades div spam#css{
-    background-color:#e03f3d;
-    color: #fff;
-    text-align: center;
+    text-align: end;
     padding: .3rem;
     border-radius: 1rem;
+    width: 0%;
+}
+
+section#habilidades div spam#css:hover{
+    background-color: #e03f3d;
+    color: #fff;
+    transition: width .6s;
+    transition-timing-function: linear;
     width: 30%;
 }
 
+section#habilidades div spam#js{
+    text-align: end;
+    padding: .3rem;
+    border-radius: 1rem;
+    width: 0%;
+}
+
+section#habilidades div spam#js:hover{
+    background-color: #e03f3d;
+    color: #fff;
+    transition: width .5s;
+    transition-timing-function: linear;
+    width: 10%;
+}
+
 section#contato{
+    background-color: #F2D5D5;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
- }
+}
  
- section#contato div#redes{
+section#contato div#redes{
     width: 100%;
     padding: 2rem;
     padding-top: 4rem;
- }
+}
  
- section#contato div#redes h3{
+section#contato div#redes h3{
     text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
- }
+}
  
- section#contato div#redes div#icons{
+section#contato div#redes div#icons{
     display: flex;
     justify-content: center;
- }
+}
  
- section#contato div#redes div#icons a{
+section#contato div#redes div#icons a{
     text-decoration: none;
     color: #C63A38;
     font-size: 3rem;
     padding: 1.5rem;
     transition: all .4s ease-out;
- }
+}
  
- section#contato div#redes div#icons a:hover{
+section#contato div#redes div#icons a:hover{
     color: #E03F3D;
- }
+}
  
- section#contato div#redes div#icons a i{
+section#contato div#redes div#icons a i{
     transition: all .4s ease-out;
- }
+}
  
- /* O atributo transform só muda um elemento que aparece efetivamente na tela, por isso colocamos ele na tag i, e não na tag a */
- section#contato div#redes div#icons a i:hover{
+section#contato div#redes div#icons a i:hover{
     transform: scale(1.1);
- }
+}
  
- section#contato div#form{
+section#contato div#form{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
- }
+}
  
- section#contato div#form h3{
+section#contato div#form h3{
     width: 100%;
     text-align: center;
     font-size: 1.2rem;
-    margin-bottom: 2rem;
     font-weight: 500;
- }
+}
  
- section#contato div#form form{
+section#contato div#form form{
     width: 50%;
+    padding-bottom: 3rem;
  }
  
- /* A virgula serve para estilizar dois elementos ao mesmo tempo */
- section#contato div#form form input, textarea{
+section#contato div#form form input, textarea{
     width: 100%;
     padding: .5rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    background-color: #F2D5D5;
     border: 1px solid #E03F3D;
-    border-radius: 2rem;
+    border-radius: .5rem;
     margin-top: .5rem;
     margin-bottom: 1rem;
     outline: none;
- }
+}
  
- section#contato div#form form label{
-    font-size: 1.2rem;
- }
- 
- section#contato div#form form button{
-    border: 1px solid #C63A38;
-    background-color: #FFF;
-    color: #C63A38;
+section#contato div#form form label{
+    font-size: 1rem;
+}
+
+section#contato div#form form button{
+    border: #e04240 ;
+    background-color: #F2D5D5;
+    color: #F2D5D5;
     padding: 1rem;
-    font-size: 1vw;
+    font-size: 1.2vw;
     font-weight: 600;
-    border-radius: 2rem;
     display: block;
     margin: auto;
     margin-top: 2rem;
     cursor: pointer;
-    transition: .6s ease-out;
     width: 20%;
- }
+    box-shadow: 0 0 40px 40px #e04240 inset, 0 0 0 0 #e04240;
+    transition: .3s ease-in-out;
+}
  
- section#contato div#form form button:hover{
-    border: 1px solid #C63A38;
+section#contato div#form form button:hover{
+    border: #e04240;
+    background-color: #F2D5D5;
+    color: black;
+    box-shadow: 0 0 10px 0 #e04240 inset, 0 0 10px 8px #e04240;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
     background-color: #C63A38;
     color: #fff;
- }
+    width: 100%;
+    line-height: 30px;
+    padding: .6rem;
+}
+
+footer p{
+    width: 100%;
+    text-align: center;
+    font-size: .8rem;
+}
