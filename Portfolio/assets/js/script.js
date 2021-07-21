@@ -1,41 +1,56 @@
-let inputNome = document.querySelector('#nome')
-let inputEmail = document.querySelector('#email')
-let textareaMensagem = document.querySelector('#mensagem')
+let nome = document.querySelector('#nome')
+let email = document.querySelector('#email')
+let mensagem = document.querySelector('#mensagem')
 let btnEnviar = document.querySelector('#enviar')
- 
-inputNome.addEventListener('keyup', () => { 
-    if(inputNome.value.length > 2){
-        inputNome.style.borderColor = 'green'
+let nomeOk = false
+let emailOk = false
+let msgOk = false
+
+nome.addEventListener('keyup', () => {
+    if (nome.value.length < 3) {
+       nome.style.borderColor = '#E03F3D'
+       nomeOk = false
+    } else if(nome.value == '' || nome.value == null) {
+        nome.style.borderColor = '#E03F3D'
+        nomeOk = false
+    } else {
+       nome.style.borderColor = 'green'
+       nomeOk = true
     }
-    else if(inputNome.Value == '' || inputNome.Value == null){
-        inputNome.style.borderColor = '#E03F3D'
-    }
-    else {
-        inputNome.style.backgroundColor = 'white'
+ })
+
+email.addEventListener('keyup', () => {
+    if (email.value.indexOf('@') == -1 || email.value.indexOf('.') == -1) {
+        email.style.borderColor = '#E03F3D'
+        emailOk = false
+    } else if(email.value == '' || email.value == null) {
+        email.style.borderColor = '#E03F3D'
+        emailOk = false
+    } else {
+        email.style.borderColor = 'green'
+        emailOk = true
     }
 })
 
-inputEmail.addEventListener('keyup', () => {
-    if(inputEmail.value.indexOf('@') == -1 || inputEmail.value.indexOf('.') == -1){
-        inputEmail.style.borderColor = 'red'
+mensagem.addEventListener('keyup', () => {
+    if (mensagem.value.length < 10 || mensagem.value.length > 500) {
+       mensagem.style.borderColor = '#E03F3D'
+       msgOk = false
+    } else if(mensagem.value == '' || mensagem.value == null) {
+        mensagem.style.borderColor = '#E03F3D'
+        msgOk = false
+    } else {
+       mensagem.style.borderColor = 'green'
+       msgOk = true
     }
-    else {
-        inputEmail.style.borderColor = 'green'
-    }
-    if(inputEmail.Value == '' || inputEmail.Value == null){
-        inputNome.style.borderColor = '#E03F3D'
-    }
-})
 
-textareaMensagem.addEventListener('keyup', () => {
-    if(textareaMensagem.value.length >= 10){
-        textareaMensagem.style.borderColor = 'green';
+    if (nomeOk && emailOk && msgOk) {
+        btnEnviar.disabled = false
+    } else {
+        btnEnviar.disabled = true
     }
-    else if(textareaMensagem.Value == '' || textareaMensagem.Value == null){
-        textareaMensagem.style.borderColor = '#E03F3D'
-    }
-})
+ })
 
 btnEnviar.addEventListener('click', () => {
-   alert('Formulário enviado com sucesso!')
+    alert('Formulário enviado com sucesso!')
 })

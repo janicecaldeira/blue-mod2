@@ -178,7 +178,7 @@ section#habilidades div spam#python{
     text-align: end;
     padding: .3rem;
     border-radius: 1rem;
-    animation: python 5s 1;
+    animation: python 5s 3;
 }
 
 @keyframes python{
