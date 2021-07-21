@@ -6,6 +6,8 @@ let nomeOk = false
 let emailOk = false
 let msgOk = false
 
+btnEnviar.disabled = true
+
 nome.addEventListener('keyup', () => {
     if (nome.value.length < 3) {
        nome.style.borderColor = '#E03F3D'
