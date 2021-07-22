@@ -7,13 +7,15 @@
    <link rel="stylesheet" href="../static/css/style.css">
    <title>Lista de Tarefas</title>
 </head>
+
 <body>
     <header>
-        <h1> {{titulo}} </h1>
         <div>
             <img src="../static/img/list.png" alt="Uma imagem de um checklist">
         </div>
-
+        
+        <h1> {{titulo}} </h1>
+      
         <form action="/new" method="POST">
            <input type="text" name="item" id="item" placeholder="Adicione uma tarefa">
            <button type="submit">Adicionar</button>
