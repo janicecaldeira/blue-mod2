@@ -54,5 +54,8 @@ mensagem.addEventListener('keyup', () => {
  })
 
 btnEnviar.addEventListener('click', () => {
-    alert('Formulário enviado com sucesso!')
+    let carregamento = document.querySelector('#carregamento')
+    carregamento.style.display = 'flex'
+    let form = document.querySelector('form')
+    form.style.display = 'none'
 })

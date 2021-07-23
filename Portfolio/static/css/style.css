@@ -332,6 +332,41 @@ section#contato div#form form button:hover{
     box-shadow: 0 0 10px 0 #e04240 inset, 0 0 10px 8px #e04240;
 }
 
+section#contato div#carregamento{
+    display: none; /* Deixa o display none para não aparecer até que você clique no botão enviar (ver JS) */
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+  
+section#contato div#carregamento p{
+    color: #0066ff;
+    font-weight: 700;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+}
+  
+section#contato div#carregamento div#loader{
+    border: 13px solid #fff;
+    border-radius: 50%;
+    border-top: 13px solid #0066ff;
+    border-bottom: 13px solid #0066ff;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    } 
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 footer{
     display: flex;
     flex-wrap: wrap;
