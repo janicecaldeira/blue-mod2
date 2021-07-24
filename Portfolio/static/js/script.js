@@ -2,11 +2,12 @@ let nome = document.querySelector('#nome')
 let email = document.querySelector('#email')
 let mensagem = document.querySelector('#mensagem')
 let btnEnviar = document.querySelector('#enviar')
+let form = document.querySelector('form')
 let nomeOk = false
 let emailOk = false
 let msgOk = false
 
-btnEnviar.disabled = true
+// btnEnviar.disabled = true
 
 nome.addEventListener('keyup', () => {
     if (nome.value.length < 3) {
@@ -35,7 +36,7 @@ email.addEventListener('keyup', () => {
 })
 
 mensagem.addEventListener('keyup', () => {
-    if (mensagem.value.length < 10 || mensagem.value.length > 500) {
+    if (mensagem.value.length < 10 || mensagem.value.length > 150) {
        mensagem.style.borderColor = '#E03F3D'
        msgOk = false
     } else if(mensagem.value == '' || mensagem.value == null) {
@@ -53,7 +54,7 @@ mensagem.addEventListener('keyup', () => {
     }
  })
 
-btnEnviar.addEventListener('click', () => {
+form.addEventListener('submit', () => {
     let carregamento = document.querySelector('#carregamento')
     carregamento.style.display = 'flex'
     let form = document.querySelector('form')

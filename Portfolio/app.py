@@ -17,38 +17,40 @@ app.config.update(mail_settings)
 mail = Mail(app)
 
 class Contato:
-    def __init__(self, nome, email, mensagem):
+    def __init__(self, nome="", email="", mensagem="", ok=False):
         self.nome = nome
         self.email = email
         self.mensagem = mensagem
+        self.ok = ok
+
+formContato = Contato()
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', formContato=formContato)
 
 @app.route('/send', methods=['GET', 'POST'])
 def send():
     if request.method == 'POST':
-        formContato = Contato(
-            request.form['nome'],
-            request.form['email'],
-            request.form['mensagem']
-    )
+        formContato.nome =  request.form['nome']
+        formContato.email = request.form['email']
+        formContato.mensagem = request.form['mensagem']
+        formContato.ok = True
 
-    msg = Message(
-        subject='Contato do seu Portfolio',
-        sender=app.config.get('MAIL_USERNAME'),
-        recipients=[app.config.get('MAIL_USERNAME')],
-        body=f'''
-            {formContato.nome} com o e-mail {formContato.email}, enviou  a seguinte mensagem:
+        msg = Message(
+            subject='Contato do seu Portfolio',
+            sender=app.config.get('MAIL_USERNAME'),
+            recipients=[app.config.get('MAIL_USERNAME')],
+            body=f'''
+                {formContato.nome} com o e-mail {formContato.email}, enviou  a seguinte mensagem:
 
-            {formContato.mensagem}
-        '''
-    )
+                {formContato.mensagem}
+            '''
+        )
 
-    mail.send(msg)
+        mail.send(msg)
 
-    return render_template('index.html', formContato=formContato)
+    return redirect("/")
 
 if __name__ == '__main__':
     app.run(debug=True)
