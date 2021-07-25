@@ -53,7 +53,7 @@ def send():
          body=f'''
          🇳​​​​​🇴​​​​​🇻​​​​​🇦​​​​​ 🇲​​​​​🇪​​​​​🇳​​​​​🇸​​​​​🇦​​​​​🇬​​​​​🇪​​​​​🇲​​
 
-         O {form.nome} com o e-mail {form.email}, enviou a seguinte mensagem: 
+         {form.nome} com o e-mail {form.email}, enviou a seguinte mensagem: 
          
         {form.mensagem}''' 
          )
