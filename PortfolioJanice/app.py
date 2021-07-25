@@ -25,6 +25,18 @@ class Contato:
 def index():
    return render_template('index.html')
 
+@app.route('/sobremim')
+def index():
+   return render_template('sobremim.html')
+
+@app.route('/projetos')
+def index():
+   return render_template('projetos.html')
+
+@app.route('/contato')
+def index():
+   return render_template('contato.html')
+
 @app.route('/send', methods=['GET', 'POST'])
 def send():
    if request.method == 'POST':
