@@ -9,7 +9,7 @@ mail_settings = {
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
     "MAIL_USERNAME": 'janicecaldeira.dev@gmail.com',
-    "MAIL_PASSWORD": 'ice.dev.blue'
+    "MAIL_PASSWORD": 'nice.dev.blue'
 }
 
 app.config.update(mail_settings)
@@ -25,9 +25,9 @@ class Contato:
 def index():
    return render_template('index.html')
 
-@app.route('/sobremim')
+@app.route('/habilidades')
 def sobremim():
-   return render_template('sobremim.html')
+   return render_template('habilidades.html')
 
 @app.route('/projetos')
 def projetos():
@@ -41,9 +41,9 @@ def contato():
 def send():
    if request.method == 'POST':
       form = Contato(
-         request.form['nome'],
+         request.form['name'],
          request.form['email'],
-         request.form['mensagem']
+         request.form['message']
       )
 
       msg = Message(
@@ -51,9 +51,9 @@ def send():
          sender=app.config.get("MAIL_USERNAME"),
          recipients=[app.config.get("MAIL_USERNAME")],
          body=f'''
-         >>> 🇳​​​​​🇴​​​​​🇻​​​​​🇦​​​​​ 🇲​​​​​🇪​​​​​🇳​​​​​🇸​​​​​🇦​​​​​🇬​​​​​🇪​​​​​🇲​​​​​ <<<
+         🇳​​​​​🇴​​​​​🇻​​​​​🇦​​​​​ 🇲​​​​​🇪​​​​​🇳​​​​​🇸​​​​​🇦​​​​​🇬​​​​​🇪​​​​​🇲​​
 
-         O {form.nome} com o email {form.email}, enviou a seguinte mensagem: 
+         O {form.nome} com o e-mail {form.email}, enviou a seguinte mensagem: 
          
         {form.mensagem}''' 
          )
