@@ -26,15 +26,15 @@ def index():
    return render_template('index.html')
 
 @app.route('/sobremim')
-def index():
+def sobremim():
    return render_template('sobremim.html')
 
 @app.route('/projetos')
-def index():
+def projetos():
    return render_template('projetos.html')
 
 @app.route('/contato')
-def index():
+def contato():
    return render_template('contato.html')
 
 @app.route('/send', methods=['GET', 'POST'])
