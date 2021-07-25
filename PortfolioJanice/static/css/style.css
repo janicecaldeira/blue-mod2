@@ -1,6 +1,6 @@
 body {
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 300;
     overflow-x: hidden;
     color: white;
@@ -17,9 +17,8 @@ a:hover { text-decoration: none; }
 button:focus { outline: none; }
 p { line-height: 1.9; }
 .tm-logo { margin-right: 20px; }
-.tm-slogan { font-size: 0.8rem; }
 
-/* Navigation */
+/* Navegação */
 .navbar-toggler {
     padding: 8px 15px;
     border: 0;
@@ -39,7 +38,7 @@ p { line-height: 1.9; }
 .navbar-expand-lg .navbar-nav .nav-link { padding: 0; }
 
 .navbar-expand-lg .navbar-nav .tm-nav-link {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: white;    
     padding-bottom: 30px;    
@@ -125,12 +124,21 @@ p { line-height: 1.9; }
 }
 
 .tm-content {
-    max-width: 660px;
+    max-width: 600px;
     margin-top: 50px;
     padding-right: 20px;
+    text-align: justify;
 }
 
-.tm-about { max-width: 525px; }
+.mb-5 {
+    font-size: 1rem;
+}
+
+.mb-6{
+    font-size: .8rem;
+}
+
+.tm-about { max-width: 500px; }
 
 ::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -143,7 +151,7 @@ p { line-height: 1.9; }
     box-shadow: 0 0 1px rgba(255,255,255,.8);
 }
 
-.tm-content-title { font-size: 1.5rem; }
+.tm-content-title { font-size: 1.2rem; }
 hr { border-top: 1px solid white; }
 
 .btn {
@@ -181,12 +189,41 @@ hr { border-top: 1px solid white; }
     color: #9CC;
 }
 
-/* Service */ 
+/* Serviços */ 
 .tm-service-text { max-width: 365px; }
 .tm-service-img { margin-right: 25px; }
 .tm-service-img-r { margin-left: 25px; }
 
-/* Contact */
+/* Contato */
+
+.mb-4 { font-size: 1.3rem; }
+
+.icons{
+    display: flex;
+    justify-content: left;
+    padding-bottom: 2rem;
+}
+ 
+.icons a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+    transition: all .4s ease-out;
+}
+ 
+.icons a:hover{
+    color: #ccc;
+}
+ 
+.icons a i{
+    transition: all .4s ease-out;
+}
+ 
+.icons a i:hover{
+    transform: scale(1.1);
+}
+
 .form-control,
 textarea {    
     color: white;
@@ -220,8 +257,8 @@ textarea {
     margin-right: auto;
 }
 
-.form-control::-webkit-input-placeholder { color: white; } /* Edge */  
-.form-control:-ms-input-placeholder { color: white; } /* Internet Explorer 10-11 */  
+.form-control::-webkit-input-placeholder { color: white; }
+.form-control:-ms-input-placeholder { color: white; } 
 .form-control::placeholder { color: white; }
 
 @media (max-width: 1200px) {
@@ -255,7 +292,7 @@ textarea {
         color: #9CC;
     }
 
-    .tm-content { margin-top: 20px; }
+    .tm-content { margin-top: 10px; }
     .tm-site-footer { padding-top: 40px; }
     .tm-col-left { width: 40%; }
 
@@ -303,7 +340,7 @@ textarea {
 
     .tm-content {
         max-height: none;
-        margin-top: 40px;
+        margin-top: 10px;
     }
 
     .tm-col-right {
@@ -319,7 +356,7 @@ textarea {
 
 @media (max-width: 460px) {
     .tm-logo { margin-right: 15px; }
-    .tm-sitename { font-size: 1.8rem; }
+    .tm-sitename { font-size: 1.5rem; }
     .tm-slogon { font-size: 0.8rem; }
 }
 
