@@ -138,7 +138,107 @@ p { line-height: 1.9; }
     font-size: .8rem;
 }
 
-.tm-about { max-width: 500px; }
+.tm-about { max-width: 600px;}
+
+section#habilidades p {
+    font-size: 1.1rem;
+}
+  
+section#habilidades div {
+    display: flex;
+    border: none;
+    border-radius: 1rem;
+}
+  
+  section#habilidades span#python {
+    background-color: #4006BF;
+    width: 80%;
+    color: #fff;
+    padding: 0.3rem;
+    text-align: end;
+    border-radius: 0.9rem;
+    animation: python 2s linear 1;
+  }
+
+@keyframes python{
+    from {width: 0%;}
+    to {width: 80%;}
+}
+  
+  section#habilidades span#html5 {
+    background-color: #4006BF;
+    width: 50%;
+    color: #fff;
+    padding: 0.3rem;
+    text-align: end;
+    border-radius: 0.9rem;
+    animation: html5 2s linear 1;
+  }
+
+@keyframes html5{
+    from {width: 0%;}
+    to {width: 50%;}
+}
+  
+  section#habilidades span#css3 {
+    background-color: #4006BF;
+    width: 40%;
+    color: #fff;
+    padding: 0.3rem;
+    text-align: end;
+    border-radius: 0.9rem;
+    animation: css3 2s linear 1;
+}
+
+@keyframes css3{
+  from {width: 0%;}
+  to {width: 40%;}
+}
+  
+  section#habilidades span#js {
+    background-color: #4006BF;
+    width: 30%;
+    color: #fff;
+    padding: 0.3rem;
+    text-align: end;
+    border-radius: 0.9rem;
+    animation: js 2s linear 1;
+  }
+
+@keyframes js{
+    from {width: 0%;}
+    to {width: 30%;}
+}
+  
+  section#habilidades span#flask {
+    background-color: #4006BF;
+    width: 20%;
+    color: #fff;
+    padding: 0.3rem;
+    text-align: end;
+    border-radius: 0.9rem;
+    animation: flask 2s linear 1;
+  }
+
+@keyframes flask{
+    from {width: 0%;}
+    to {width: 20%;}
+}
+  
+  section#habilidades span#cloud {
+    background-color: #4006BF;
+    width: 20%;
+    color: #fff;
+    padding: 0.3rem;
+    text-align: end;
+    border-radius: 0.9rem;
+    animation: cloud 2s linear 1;
+  }
+
+@keyframes cloud{
+    from {width: 0%;}
+    to {width: 20%;}
+}
 
 ::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -196,7 +296,7 @@ hr { border-top: 1px solid white; }
 
 /* Contato */
 
-.mb-4 { font-size: 1.3rem; }
+.mb-4 { font-size: 1.3rem; align-items: baseline; }
 
 .icons{
     display: flex;

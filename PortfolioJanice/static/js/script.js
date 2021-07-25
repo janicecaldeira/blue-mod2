@@ -1,8 +1,8 @@
-let nome = document.querySelector('#name')
-let email = document.querySelector('#email')
-let mensagem = document.querySelector('#message')
-let btnEnviar = document.querySelector('#btn btn-big btn-primary')
-let form = document.querySelector('contact-form')
+let nome = document.querySelector('name')
+let email = document.querySelector('email')
+let mensagem = document.querySelector('message')
+let btnEnviar = document.querySelector('btn btn-big btn-primary')
+let form = document.querySelector('form')
 
 nome.addEventListener('keyup', () => {
     if (nome.value.length < 3) {

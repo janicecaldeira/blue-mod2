@@ -40,7 +40,7 @@ def contato():
 @app.route('/send', methods=['GET', 'POST'])
 def send():
    if request.method == 'POST':
-      formContato = Contato(
+      form = Contato(
          request.form['nome'],
          request.form['email'],
          request.form['mensagem']
@@ -53,12 +53,12 @@ def send():
          body=f'''
          >>> 🇳​​​​​🇴​​​​​🇻​​​​​🇦​​​​​ 🇲​​​​​🇪​​​​​🇳​​​​​🇸​​​​​🇦​​​​​🇬​​​​​🇪​​​​​🇲​​​​​ <<<
 
-         O {formContato.nome} com o email {formContato.email}, enviou a seguinte mensagem: 
+         O {form.nome} com o email {form.email}, enviou a seguinte mensagem: 
          
-        {formContato.mensagem}''' 
+        {form.mensagem}''' 
          )
       mail.send(msg)
-   return render_template('contato.html', formContato=formContato)
+   return render_template('contato.html',form=form)
 
 if __name__ == '__main__':
    app.run(debug=True)
