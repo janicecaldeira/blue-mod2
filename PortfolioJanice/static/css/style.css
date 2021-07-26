@@ -366,6 +366,7 @@ textarea {
 /* Carregamento */
 
 #carregamento{
+    display: none;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 3rem;
