@@ -359,6 +359,34 @@ textarea {
     box-shadow: 0 0 10px 0 #4006BF inset, 0 0 10px 8px #4006BF;
 }
 
+/* Carregamento */
+
+#carregamento{
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
+#carregamento p{
+    color: white;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+}
+
+#loader{
+    border: 6px solid #ccc;
+    border-radius: 50%;
+    border-top-color: #4006BF;
+    height: 50px;
+    width: 50px;
+    animation: is-rotating 1s infinite;
+}
+
+@keyframes is-rotating {
+    to {transform: rotate(1turn);}
+}
+
 @media (max-width: 1200px) {
     .nav-item { margin-right: 30px; }
 

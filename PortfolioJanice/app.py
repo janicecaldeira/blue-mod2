@@ -58,7 +58,7 @@ def send():
         {form.mensagem}''' 
          )
       mail.send(msg)
-   return render_template('contato.html',form=form)
+   return render_template('send.html',form=form)
 
 if __name__ == '__main__':
    app.run(debug=True)

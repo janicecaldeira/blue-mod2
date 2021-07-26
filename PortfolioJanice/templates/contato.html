@@ -70,22 +70,25 @@
                             </a>
                         </div>
 
-                        <h2 class="mb-4 tm-content-title">Mande sua mensagem</h2>
+                        <h2 id="titulo" class="mb-4 tm-content-title">Mande sua mensagem</h2>
                         <form id="form" action="/send" method="POST">
                             <div class="form-group mb-4">
-                                <input type="text" name="name" class="form-control" placeholder="Nome" required/>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Nome" required/>
                             </div>
                             <div class="form-group mb-4">
-                                <input type="email" name="email" class="form-control" placeholder="E-mail" required/>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="E-mail" required/>
                             </div>
                             <div class="form-group mb-5">
-                                <textarea rows="2" name="message" class="form-control" placeholder="Mensagem..." required></textarea>
+                                <textarea rows="2" name="message" id="message" class="form-control" placeholder="Mensagem..." required></textarea>
                             </div>
                             <div class="text-right">
                                 <button type="submit" class="btn btn-big btn-primary">Enviar</button>
                             </div>
                         </form>
                     </section>
+                    <div id="carregamento">
+                        <p>Enviando mensagem</p>
+                    <div id="loader"></div>
                 </main>
             </div>
         </div>        
@@ -107,7 +110,7 @@
             </div>  
         </div>
 
-        <div class="tm-bg"> <!-- Diagonal background design -->
+        <div class="tm-bg">
             <div class="tm-bg-left"></div>
             <div class="tm-bg-right"></div>
         </div>
