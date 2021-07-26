@@ -138,6 +138,10 @@ p { line-height: 1.9; }
     font-size: .8rem;
 }
 
+.mb-7{
+    font-size: 1.1rem;
+}
+
 .tm-about { max-width: 600px;}
 
 /* Habilidades */
@@ -362,14 +366,12 @@ textarea {
 /* Carregamento */
 
 #carregamento{
-    display: none;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 3rem;
 }
-  
-#carregamento p{
-    color: white;
-    font-size: 1.2rem;
+
+#carregando{
     width: 100%;
     text-align: center;
 }
