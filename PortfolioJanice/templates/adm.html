@@ -13,7 +13,17 @@
 </head>
 
 <body>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
 
+    
     <form action='/new' method="POST">
 
         <h1>Cadastre um novo projeto</h1>
@@ -58,6 +68,6 @@
         </tbody>
     </table>
 
-
+    <script src="../static/js/adm.js"></script>
 </body>
 </html>

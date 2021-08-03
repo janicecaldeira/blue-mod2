@@ -1,8 +1,10 @@
-from flask import Flask, render_template, redirect, request
+from flask import Flask, render_template, redirect, request, flash
 from flask_mail import Mail, Message
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+app.secret_key = 'blue'
+
 
 mail_settings = {
     "MAIL_SERVER": 'smtp.gmail.com',
@@ -70,6 +72,7 @@ def new():
       )
       db.session.add(projeto)
       db.session.commit()
+      flash('Deu bom!')
       return redirect('/adm')
 
 @app.route('/send', methods=['GET', 'POST'])
