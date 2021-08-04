@@ -53,6 +53,7 @@
                 <th>Imagem</th>
                 <th>Descrição</th>
                 <th>Link</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -60,9 +61,18 @@
             <tr>
                 <td>{{p.id}}</td>
                 <td>{{p.nome}}</td>
-                <td>{{p.imagem}}</td>
+                <td>
+                    <a href='{{p.imagem}}'>
+                    {{p.imagem}}</a>
+                </td>
                 <td>{{p.descricao}}</td>
-                <td>{{p.link}}</td>
+                <td>
+                    <a href='{{p.link}}'>
+                </td>
+                </a>
+                <td>
+                    <a href="/delete/{{p.id}}">Apagar</a>
+                </td>
             </tr>
             {% endfor %}
         </tbody>

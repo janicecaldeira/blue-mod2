@@ -46,7 +46,7 @@
                                     <a class="nav-link tm-nav-link" href="/contato">Contato</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link tm-nav-link" href="/adm"><i class="fas fa-users-cog fa-1x p-3 mr-4"></i></a>
+                                    <a class="nav-link tm-nav-link" href="/login"><i class="fas fa-users-cog fa-1x p-3 mr-4"></i></a>
                                 </li>                                 
                             </ul>                            
                         </div>                        
@@ -54,20 +54,22 @@
                 </div>
             </div>
             
+            {% for p in projetos %}
             <div class="tm-row">
                 <div class="tm-col-left"></div>
                 <main class="tm-col-right">
                     <section class="tm-content">
                         <div class="media my-3 mb-5 tm-service-media tm-service-media-img-l">
-                            <a href="https://jogohumor-janice.netlify.app/", target="_blank"><img src="../static/img/projeto1.png" width="200px" alt="Imagem do personagem Garfield" class="tm-service-img"></a>
+                            <a href="{{p.link}}", target="_blank"><img src="{{p.imagem}}" width="200px" alt="Imagem do personagem Garfield" class="tm-service-img"></a>
                             <div class="media-body tm-service-text">
-                                <h2 class="mb-4 tm-content-title">Jogo do Humor</h2>
-                                <p>Esse jogo teve o objetivo de treinar e validar meus conhecimentos iniciais em HTML, CSS e JavaScript. É um site estático para mostrar uma troca de humor de um personagem.</p>
+                                <h2 class="mb-4 tm-content-title">{{p.nome}}</h2>
+                                <p>{{p.descricao}}</p>
                             </div> 
                         </div>
                     </section>
                 </main>
             </div>
+            {% endfor %}
         </div>        
 
         <div class="tm-row">

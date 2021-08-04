@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, flash
+from flask import Flask, render_template, redirect, request, flash, session
 from flask_mail import Mail, Message
 from flask_sqlalchemy import SQLAlchemy
 
@@ -42,22 +42,31 @@ class Projeto(db.Model):
 
 @app.route('/')
 def index():
+   session['user_logado'] = None
    return render_template('index.html')
 
 @app.route('/habilidades')
 def sobremim():
+   session['user_logado'] = None
    return render_template('habilidades.html')
 
 @app.route('/projetos')
 def projetos():
-   return render_template('projetos.html')
+   session['user_logado'] = None
+   projetos = Projeto.query.all()
+   return render_template('projetos.html', projetos=projetos)
 
 @app.route('/contato')
 def contato():
+   session['user_logado'] = None
    return render_template('contato.html')
 
 @app.route('/adm')
 def adm():
+   if 'user_logado' not in session or session['user_logado'] == None:
+      flash("Faça o login antes de acessar essa rota!")
+      return redirect('/login')
+   
    projetos = Projeto.query.all()
    return render_template('adm.html', projetos=projetos)
 
@@ -72,8 +81,30 @@ def new():
       )
       db.session.add(projeto)
       db.session.commit()
-      flash('Deu bom!')
+      flash('Projeto criado!')
       return redirect('/adm')
+
+@app.route('/delete/<id>')
+def delete(id):
+   projeto = Projeto.query.get(id)
+   db.session.delete(projeto)
+   db.session.commit()
+   flash('Projeto apagado com sucesso')
+   return redirect('/adm')
+
+@app.route('/login')
+def login():
+   return render_template('login.html')
+
+@app.route('/auth', methods=['GET','POST'])
+def auth():
+   if request.form['senha'] == 'admin':
+      session['user_logado'] = 'logado'
+      flash('Login feito com sucesso!')
+      return redirect('/adm')
+   else:
+      flash('Erro no login, tente novamente!')
+      return redirect('/login')
 
 @app.route('/send', methods=['GET', 'POST'])
 def send():
