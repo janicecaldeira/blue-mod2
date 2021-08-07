@@ -54,7 +54,7 @@ def sobremim():
 def projetos():
    session['user_logado'] = None
    projetos = Projeto.query.all()
-   return render_template('projetos.html', projetos=projetos)
+   return render_template('projetos.html', projetos=projetos, projetos='')
 
 @app.route('/contato')
 def contato():
@@ -83,6 +83,18 @@ def new():
       db.session.commit()
       flash('Projeto criado!')
       return redirect('/adm')
+
+@app.route('/edit/<id>', methods=['GET','POST'])
+def edit(id):
+   projeto = Projeto.query.get(id)
+   if request.method == 'POST':
+      projeto.nome = request.form['nome']
+      projeto.descricao = request.form['descricao']
+      projeto.imagem = request.form['imagem']
+      projeto.link = request.form['link']
+      db.session.commit()
+      return redirect('/adm')
+   return render_template('adm.html', projeto=projeto)
 
 @app.route('/delete/<id>')
 def delete(id):
